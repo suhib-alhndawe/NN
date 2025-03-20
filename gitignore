@@ -1,3 +1,23 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# Ignore dataset files
+*.csv
+*.xlsx
+*.json
+
+# Ignore saved model files
+*.h5
+*.pt
+*.pth
+
+# Ignore virtual environment directories
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ignore local configuration files
+config.json
+.env
