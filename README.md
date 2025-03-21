@@ -1,4 +1,3 @@
-Here's a structured **README** file in English for your project, formatted for GitHub, including some emojis:
 
 ---
 
