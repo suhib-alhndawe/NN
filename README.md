@@ -72,9 +72,10 @@ curl -X POST "http://localhost:8000/predict" \
 - Compute **accuracy** on the test dataset.
 - Print training progress and results.
 
+## 🌐 **Deployment on Docker Hub**
+I have deployed the model on **Docker Hub** for easy access and distribution. You can pull the Docker image from the following link:
+
+- **Docker Hub Repository**: [suhibalfurjani/news](https://hub.docker.com/repository/docker/suhibalfurjani/news)
+
 ## 📌 Author
 Developed by **Suhib Alfurjani** 🚀
-
----
-
-
