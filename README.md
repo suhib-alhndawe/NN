@@ -110,7 +110,8 @@ The model is trained using BERT, and the results are evaluated based on accuracy
 
 ## 🧑‍💻 Contributors
 
-- **suhib-alhndawe** - [GitHub Profile]([https://github.com/suhib-alhndawe](https://github.com/suhib-alhndawe)
+- **suhib-alhndawe** - [GitHub Profile](https://github.com/suhib-alhndawe)
+
 
 ## 📄 License
 
