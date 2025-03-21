@@ -1,56 +1,55 @@
-# Sentiment Analysis using BERT 🤖
+# 📰 News Sentiment Analysis API 🚀
 
-## Overview 📌
-This project implements sentiment analysis using **BERT (Bidirectional Encoder Representations from Transformers)**. It processes textual data, tokenizes it with a pretrained BERT tokenizer, and trains a classification model using **PyTorch**.
+## Overview
+This project is a **news sentiment analysis API** that classifies news articles into **positive, negative, or neutral** sentiments using a **pre-trained deep learning model**. It provides a simple **web interface** and supports API requests for sentiment classification.
 
-## Features ✨
-- **Data Preprocessing**: Cleans and prepares the text for analysis.
-- **BERT Tokenization**: Uses `bert-base-uncased` tokenizer for input encoding.
-- **Model Training**: Fine-tunes a **BERT for Sequence Classification** model.
-- **Performance Evaluation**: Computes accuracy after each training epoch.
+## 🔧 Technologies Used
+- **Python** 🐍
+- **TensorFlow/Keras** for deep learning
+- **FastAPI** for API development ⚡
+- **Transformers (BERT)** for tokenization
+- **Docker** for containerization 🐳
 
-## Installation ⚙️
-To set up the project, install the required dependencies:
+## 📌 Features
+- Load a **pre-trained Keras model** (`final_model.h5`) for sentiment classification.
+- Preprocess input text (cleaning, tokenization, and padding).
+- Provide a **FastAPI endpoint** (`/predict`) for sentiment analysis.
+- Serve a **user-friendly web interface** for text input and classification.
+- Deployable with **Docker** for scalability and portability.
+
+## 🛠 Installation & Usage
+### 1️⃣ Clone the repository:
 ```bash
-pip install pandas scikit-learn transformers torch
+ git clone https://github.com/your-repo/news-sentiment-api.git
+ cd news-sentiment-api
+```
+### 2️⃣ Run with Docker:
+```bash
+docker build -t sentiment-api .
+docker run -p 8000:8000 sentiment-api
+```
+### 3️⃣ Access the web interface:
+Open your browser and go to: 
+```
+http://localhost:8000/
+```
+### 4️⃣ API Usage (via cURL):
+```bash
+curl -X POST "http://localhost:8000/predict" \
+-H "Content-Type: application/json" \
+-d '{"text": "The economy is improving rapidly!"}'
 ```
 
-## Usage 🚀
-1. **Load & Preprocess Data**
-   ```python
-   df = load_data('data.csv')
-   df = preprocess_data(df)
-   ```
-2. **Split Data**
-   ```python
-   X_train, X_test, y_train, y_test = split_data(df)
-   ```
-3. **Tokenization**
-   ```python
-   X_train_enc, X_test_enc = tokenize_data(X_train, X_test)
-   ```
-4. **Train the Model**
-   ```python
-   train_model(X_train_enc, X_test_enc, y_train, y_test, num_epochs=5)
-   ```
+## 📊 Example Output:
+```json
+{
+  "sentiment": "positive"
+}
+```
 
-## Model Architecture 🏗️
-- **Pretrained BERT model** (`bert-base-uncased`)
-- **Fully connected classification layer**
-- **CrossEntropyLoss for classification**
-- **Adam optimizer with a learning rate of 2e-5**
-
-## Results 📊
-The model evaluates sentiment classification accuracy after each epoch.
-
-## Future Enhancements 🔥
-- Implement **hyperparameter tuning**.
-- Try **different transformer models** for better performance.
-- Integrate **real-time predictions** into a web app.
-
-## License 📜
-This project is open-source under the **MIT License**.
+## 📌 Author
+Developed by **Suhib Alfurjani** 🚀
 
 ---
-🚀 Happy Coding! 🎉
+Feel free to contribute or provide feedback! ✨
 
