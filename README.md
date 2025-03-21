@@ -9,6 +9,8 @@ This project is a **news sentiment analysis API** that classifies news articles 
 - **FastAPI** for API development ⚡
 - **Transformers (BERT)** for tokenization
 - **Docker** for containerization 🐳
+- **PyTorch** for model training 🏋️
+- **Scikit-learn** for data processing 📊
 
 ## 📌 Features
 - Load a **pre-trained Keras model** (`final_model.h5`) for sentiment classification.
@@ -16,6 +18,7 @@ This project is a **news sentiment analysis API** that classifies news articles 
 - Provide a **FastAPI endpoint** (`/predict`) for sentiment analysis.
 - Serve a **user-friendly web interface** for text input and classification.
 - Deployable with **Docker** for scalability and portability.
+- Train a **BERT-based model** for sentiment classification.
 
 ## 🛠 Installation & Usage
 ### 1️⃣ Clone the repository:
@@ -47,9 +50,31 @@ curl -X POST "http://localhost:8000/predict" \
 }
 ```
 
+## 🏋️ Model Training
+### 1️⃣ Load and Preprocess Data:
+- Load dataset from CSV.
+- Convert text to lowercase and clean it.
+- Tokenize using **BERT tokenizer**.
+
+### 2️⃣ Split Data:
+- Use `train_test_split` to split data into **training** and **testing** sets.
+
+### 3️⃣ Encode and Prepare Data:
+- Convert text into **BERT tokenized format**.
+- Encode sentiment labels using **LabelEncoder**.
+
+### 4️⃣ Train Model:
+- Load **BERT for sequence classification**.
+- Train for a defined number of **epochs**.
+- Use **CrossEntropyLoss** and **Adam optimizer**.
+
+### 5️⃣ Evaluate Model:
+- Compute **accuracy** on the test dataset.
+- Print training progress and results.
+
 ## 📌 Author
 Developed by **Suhib Alfurjani** 🚀
 
 ---
-Feel free to contribute or provide feedback! ✨
+
 
