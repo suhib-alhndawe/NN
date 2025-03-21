@@ -1,8 +1,8 @@
 from transformers import BertTokenizer
 import torch
-from model_utils import load_model  # Make sure this function exists
-from data_processing import tokenize_data  # Make sure this function exists
-from model import create_model  # Make sure this function exists
+from model_utils import load_model   
+from data_processing import tokenize_data   
+from model import create_model   
 
 
 def make_inference(model_path, text_input):
